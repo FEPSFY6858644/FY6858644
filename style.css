@@ -25,4 +25,13 @@ tr:nth-child(even){
 p.ex1 {
   margin-left: 250px;
 }
-  
+
+.myslides{
+  display:none;
+}
+
+body{
+  background-color: #FFFFFF;
+  margin-left: 50px;
+}
+
