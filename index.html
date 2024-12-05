@@ -10,37 +10,61 @@
         <h1> <b> ENG0018 Comp Lab 2024 </b></h1>
         <h2> URN: 6858644</h2>
     <hr>
-    <h2> conference paper: hello world</h2>
+    <h2> The evolution of calculating Value at Risk (VaR): its introduction and evolution through time </h2>
     <p class="ex1">
+      <h3>Abstract</h3>
     <pre>
-  Active  Learning (Angluin,  1988,  Cohn  et  al.,  1994)  is  a  paradigm  where  a  concept  is  learnt  by  an intelligent machine through the interaction of an oracle with the machine system
-      over a sequence of learning epochs. A distinctive component in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness, 
-      i.e., their potential to  improve  the  classification  model.  Various  strategies  have  been  proposed  including;  Query  by Committee  (Seung  et  al.,  1992),Monte  Carlo  estimation  (Roy  and  McCallum,  2001)
-      ,  uncertainty sampling  (Lewis  and  Gale,  1994)  and  version  space  reduction  (margin  sampling)  (Tong  and  Koller, 2001). Irrespective of how the most informative pattern instances are chosen at each epoch
-      they are presented  for  labeling,  to  a  machine  (database)  or  human  oracle  that  has  knowledge  of  the  class labels.  After  adding  the  newly  labeled  instances  to  the  current  training  set,  a  
-      revised  model  is subsequently induced. A goal of this process is to achieve anefficient, incremental advancement of learning at each epoch. The process is continued until some stopping criterion has been met, 
-      such as reaching a stage where information from the selected instances is contrary to the model, causing the classifier confidence to drop, as in Vlachos (2008
+This article is centred around Value at Risk (VaR). This is a statistic that allows for risk analysts in the financial sector to estimate the maximum potential losses for investments over time (corporate financial institute, 2023). 
+      This metric is useful as it allows for potential risks to be modelled more accurately (Carol Alexander, 2008) which ultimately will lead to better financial decisions. Due to its importance, many banks and investment firms used VaR as part of their models. 
+      JP Morgan was the first to formally introduce this into their model in 1994 (Peter Adamko et al, 2015,18-24). The purpose of this article is to go how the calculation of VaR has been refined over time.
     </pre>
   </p>
-    <h3 id="analysis and discussion">
       analysis and discussion
+    </h2>
+    <h3>Introduction of Value at Risk</h3>
+    <p>Calculating Value at Risk is a technique that determines the maximum probable loss for an investment. Its one of many different metrics used by analysts to determine the potential risks of an investment.
+      All methods that calculate VaR need: a large data set (for accuracy) and a fixed period of time of which to calculate the value. Mentions of VaR date back to the 1940s where Dickson H. Leavens published his work on attempting to find the final value of 10 government bonds.
+      He was quoted as to saying “the spread between the likely profit and loss” (Peter Adamko et at, 2015, 18-24) which partially relates to Value at Risk as a loss estimate would need to be calculated to get the range of the spread. 
+      JP Morgan officially introduced calculated VaR values as a part of their strategy in 1994 (Peter Adamko et al, 2015,18-24). By this point in time, there had been 2 main methods of calculating VaR values: the Variance-covariance method and the historical method.
+    </p>
+    <h3>
+      The Variance-covariance Method (1980s)
     </h3>
+    <p>
+      The variance covariance method requires you to have certain variables such as the standard deviation of returns and confidence intervals.  A confidence interval is the probability that a final value will fall within a range of values. 
+      Most of the time this value falls between the 95-99% range. (Adam Hayes, 2024). The lower bound of this interval would be classed as the maximum expected loss.
+      However, this does not mean the loss is capped at this value. 
+      <img src="https://www.researchgate.net/profile/Changhe-Li/publication/286604410/figure/fig2/AS:762414932963328@1558785293332/The-graph-of-probability-density-function-for-the-normal-distribution-of-mean-m-and.png"/>
+      Using the graph above as reference, if our Value at Risk probability value was -0.477 (2 standard deviations from the mean), there would be a corresponding monetary value for this probability, and we would say that this is our calculated VaR. 
+      as you can see in the graph there are more values to the left of this probability which can still occur, this means that the loss could be greater than the VaR but the probability of this happening is low. 
+      In essence the accuracy of the calculated VaR is dependent on how confident the analyst is on the range that they say values will lie within.
+The main advantage of this method is the simplicity of it as you only have to consider a few variables. This means that its relatively easy to use however this does come with some disadvantages too. 
+      The fact that we are only considering a few variables when calculating the VaR value means that you don’t take into account a lot of other variables that affect the true value. 
+      This means that it is not as accurate as later methods that take more into account (Andrey Boyarshinov, no date). For instance, the historical method takes more data into account.
+    </p>
+    <h3>
+      The historical Method (1990s)
+    </h3>
+    <p>
+      The historical method is both easier to calculate and more accurate than the variance covariance method. This is due to it using past data (and no assumptions) to determine the VaR value (NorthernStarRisk, 2024). 
+      For this method all you need is the set of previous returns and a confidence interval value. If we had a 99% confidence value and 100 data points, the VaR would lie at the 2nd lowest value.
+This method is good for finding potential losses when you have a lot of previous data as it will only get more accurate as time goes on.
+      However, as it uses previous data to determine future values it means that sudden changes in markets aren’t picked up as fast by this method. 
+    </p>
+    <h3>Monte Carlo Simulations (1990s-now)</h3>
+    <p>
+      This method is the most accurate one out of the three detailed in this article however it is also the hardest one to calculate. This is due to the analyst having to simulate various different scenarios, calculate the losses for each simulation and derive the final VaR from these losses.
+      You still need to calculate the mean and standard deviation of each scenario before calculating VaR values. This can be very time consuming as you have to simulate potentially thousands of different outcomes. 
+      The main disadvantage of the Monte Carlo simulation method is the size of the dataset required(Andrey Boyarshinov, no date). It needs thousands of simulations to be carried out for a final value to be calculated so the amount of data you need to collect before starting this method is very large. 
+      This method is arguably the most effective one and the most commonly adopted one by banks and investment firms at the time of writing. (Ryan O’Connell, 2024)
+    </p>
+    <h3>conclusion</h3>
+    <p>
+      Overall, the methods of calculated Value at Risk have improved as time has progressed, but they will never be 100% accurate to the losses. This is due to the volatile nature of markets. Despite this it’s still been proven to be a good metric in determining financial risk. 
+    </p>
     <table>
-      <tr>
-        <th><h3> Table of contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract"> Abstract</td>
-      </tr>
-      <tr>
-        <td> <a href= "#Analysis and discussion"> analysis and discussion</td>
-      </tr>
-      <tr>
-        <td>
-          <a href= "#References"> References
-        </td>
+
       </tr>
     </table>
-    <a href= "https://en.wikipedia.org/wiki/Surrey"> surrey et al (2024). </a>
   </body>
 </html>
