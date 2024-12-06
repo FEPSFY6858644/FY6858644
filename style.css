@@ -38,7 +38,18 @@ body{
   color: white;
   
 }
-
+#analysis{
+  text-align: center;
+  padding-right:5px;
+  padding-left:5px;
+  border-color:black;
+}
+#navigation{
+  text-align:center;
+  background-color:black;
+  color: white;
+  font-weight:bold;
+}
 #logo{
   background-color: white;
   box-shadow: 4px 5px 5px;
