@@ -46,7 +46,8 @@ body{
 }
 #Analysis{
   text-align: center;
-  border-color:black;
+  margin-left: auto;
+  margin-right: auto;
 }
 #navigate{
   text-align:center;
