@@ -34,5 +34,11 @@ body{
 
 #bannerTop {
   text-align: center;
-  background-color: red;
+  background-color: grey;
+  color: white;
+  
 }
+
+#logo{
+  box-shadow: 4px 5px 5px;
+  
