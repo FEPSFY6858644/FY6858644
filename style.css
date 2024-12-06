@@ -40,11 +40,9 @@ body{
 }
 #Analysis{
   text-align: center;
-  padding-right:5px;
-  padding-left:5px;
   border-color:black;
 }
-#Navigate{
+#navigate{
   text-align:center;
   background-color:black;
   color: white;
