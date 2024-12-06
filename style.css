@@ -7,6 +7,10 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 30%;
+  text-align:center;
+  background-color:black;
+  color: white;
+  font-weight:bold;
 }
 
 td, th{
