@@ -42,6 +42,9 @@ body{
   background-color: #FFFFFF;
   margin-left: 50px;
 }
+#top{
+  text-align:center;
+}
 
 #bannerTop {
   text-align: center;
